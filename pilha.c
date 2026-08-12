@@ -70,3 +70,27 @@ void imprimir(Pilha* p) {
 
     printf("]\n");
 }
+
+// Desempilha um elemento
+// Entrada: pilha
+// Retorno: ponteiro para o elemento retirado do topo da pilha, ou NULL contrário
+// Pré-condição: pilha criada
+// Pós-condição: um elemento é removido do topo da pilha
+TipoItem* pop(Pilha* p) {
+    if(vazia(p)) {
+        printf("Pilha vazia.\n");
+        return NULL;
+    }
+
+    TipoItem* aux = malloc(sizeof(TipoItem));
+
+    if(aux == NULL) {
+        printf("Erro de alocação de memória.\n");
+        return NULL;
+    }
+
+    p->topo--;
+    *aux = p->vet[p->topo];
+
+    return aux;
+}

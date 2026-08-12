@@ -48,4 +48,11 @@ int vazia(Pilha* p);
 // Pós-condição: os elementos da pilha são exibidos na tela
 void imprimir(Pilha* p);
 
+// Desempilha um elemento
+// Entrada: pilha
+// Retorno: ponteiro para o elemento retirado do topo da pilha, ou NULL contrário
+// Pré-condição: pilha criada
+// Pós-condição: um elemento é removido do topo da pilha
+TipoItem* pop(Pilha* p);
+
 #endif /* pilha_h */

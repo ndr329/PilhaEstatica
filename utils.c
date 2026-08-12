@@ -13,12 +13,14 @@ void menu(void) {
     Pilha* p = cria_pilha_vazia();
 
     TipoItem info;
+    TipoItem* x;
     int op = -1;
 
     while(op != 0) {
         printf("\nEscolha uma das opções:\n\n");
         printf("1. Inserir um elemento na pilha\n");
         printf("2. Exibir pilha\n");
+        printf("3. Desempilhar um elemento")
         printf("0. Encerrar programa\n");
         printf("\nOpção: ");
         scanf("%d", &op);
@@ -33,6 +35,14 @@ void menu(void) {
             case 2:
                 printf("Pilha: ");
                 imprimir(p);
+                break;
+
+            case 3:
+                x = pop(p);
+                if(x != NULL) {
+                    printf("O elemento %d foi removido da pilha.\n", *x);
+                    free(x);
+                }
                 break;
 
             case 0:
