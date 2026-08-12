@@ -42,3 +42,31 @@ void push(Pilha* p, TipoItem info) {
     else 
         printf("Pilha cheia.\n");
 }
+
+// Verifica se a pilha está vazia
+// Entrada: pilha
+// Retorno: 1 se vazia ou 0 caso contrário
+// Pré-condição: pilha criada
+// Pós-condição: nenhuma
+int vazia(Pilha* p) {
+    return (p->topo == 0);
+}
+
+// Exibe os elementos da pilha
+// Entrada: pilha
+// Retorno: nenhum
+// Pré-condição: pilha criada
+// Pós-condição: os elementos da pilha são exibidos na tela
+void imprimir(Pilha* p) {
+    if(vazia(p)) {
+        printf("[ ]\n");
+        return;
+    }
+
+    printf("[ ");
+
+    for(int i = 0; i < p->topo; i++)
+        printf("%d ", p->vet[i]);
+
+    printf("]\n");
+}

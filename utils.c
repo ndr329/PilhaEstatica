@@ -18,6 +18,7 @@ void menu(void) {
     while(op != 0) {
         printf("\nEscolha uma das opções:\n\n");
         printf("1. Inserir um elemento na pilha\n");
+        printf("2. Exibir pilha\n");
         printf("0. Encerrar programa\n");
         printf("\nOpção: ");
         scanf("%d", &op);
@@ -27,6 +28,11 @@ void menu(void) {
                 printf("Digite o valor do elemento: ");
                 scanf("%d", &info);
                 push(p, info);
+                break;
+
+            case 2:
+                printf("Pilha: ");
+                imprimir(p);
                 break;
 
             case 0:
