@@ -20,7 +20,7 @@ void menu(void) {
         printf("\nEscolha uma das opções:\n\n");
         printf("1. Inserir um elemento na pilha\n");
         printf("2. Exibir pilha\n");
-        printf("3. Desempilhar um elemento")
+        printf("3. Desempilhar um elemento\n");
         printf("0. Encerrar programa\n");
         printf("\nOpção: ");
         scanf("%d", &op);
